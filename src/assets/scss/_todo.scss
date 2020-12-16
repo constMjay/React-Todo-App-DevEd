@@ -1,0 +1,65 @@
+.main {
+  .container {
+    .todo {
+      &__upperContent {
+        background-image: url("../images/todo-upperBackground.jpg");
+        background-size: cover;
+        background-position: top-center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 30vh;
+      }
+      &__bottomContent {
+        .upperPart {
+          .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .btn-container {
+              margin: 0 0 0 0.5rem;
+            }
+          }
+        }
+        .bottomPart {
+          .table {
+            thead {
+              text-align: center;
+              tr {
+                th {
+                  &:nth-child(2) {
+                    width: 30%;
+                  }
+                }
+              }
+            }
+            tbody {
+              tr {
+                td {
+                  text-align: center;
+                  &.completed {
+                    text-decoration: line-through;
+                    opacity: 0.5;
+                  }
+                  &:last-child() {
+                    display: flex;
+                    justify-content: center;
+                    button {
+                      border: none;
+                      outline: none;
+                      i {
+                        pointer-events: none;
+                      }
+                    }
+                    button:first-child() {
+                      margin: 0 0.5rem 0 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
